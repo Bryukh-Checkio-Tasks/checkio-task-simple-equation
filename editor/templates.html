@@ -3,28 +3,51 @@
         <div class="output"></div>
         <div class="explanation center-exp"></div>
         <div class="answer"></div>
-        <div class="call"></div>
+        <div class="call"><span class="call-result"></span></div>
     </div>
 </script>
 
 <script type="text/template" id="template_tryit">
     <div class="tryit-content center-exp">
-        <table class="tool">
+        <div class="tooltip">Enter numbers:</div>
+        <table>
             <tr>
                 <td>
-                    <input type="text" value="test">
+                    A
                 </td>
                 <td>
-                    <button class="bn-check btn">Action</button>
+                    B
+                </td>
+                <td>
+                    C
+                </td>
+                <td>
+                    N
+                </td>
+                <td rowspan="2" class="td-button">
+                    <button type="button" class="bn-check btn" value="Check">Check</button>
                 </td>
             </tr>
             <tr>
-                <td colspan="2" class="checkio-result">
-                    Result:<br>
-                    <span class="checkio-result-in">&nbsp;</span>
+                <td>
+                    <input type="text" class="number-input A-input" value="1" maxlength="3">
+                </td>
+                <td>
+                    <input type="text" class="number-input B-input" value="1" maxlength="3">
+                </td>
+                <td>
+                    <input type="text" class="number-input C-input" value="1" maxlength="3">
+                </td>
+                <td>
+                    <input type="text" class="number-input N-input" value="1" maxlength="3">
                 </td>
             </tr>
-
         </table>
+
+
+        <div class="checkio-result center-exp">
+            <span class="checkio-result-in">&nbsp;</span>
+        </div>
+
     </div>
 </script>

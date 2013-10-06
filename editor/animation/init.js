@@ -90,29 +90,35 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
 
         });
 
-       
+        var $tryit;
+//
+        ext.set_console_process_ret(function (this_e, ret) {
+            $tryit.find(".checkio-result-in").html("Result: " + ret);
+        });
 
-        var colorOrange4 = "#F0801A";
-        var colorOrange3 = "#FA8F00";
-        var colorOrange2 = "#FAA600";
-        var colorOrange1 = "#FABA00";
+        ext.set_generate_animation_panel(function (this_e) {
 
-        var colorBlue4 = "#294270";
-        var colorBlue3 = "#006CA9";
-        var colorBlue2 = "#65A1CF";
-        var colorBlue1 = "#8FC7ED";
+            $tryit = $(this_e.setHtmlTryIt(ext.get_template('tryit')));
 
-        var colorGrey4 = "#737370";
-        var colorGrey3 = "#9D9E9E";
-        var colorGrey2 = "#C5C6C6";
-        var colorGrey1 = "#EBEDED";
+            $tryit.find('.bn-check').click(function (e) {
+                var $a = $tryit.find(".A-input");
+                var $b = $tryit.find(".B-input");
+                var $c = $tryit.find(".C-input");
+                var $n = $tryit.find(".N-input");
+                var a = parseInt($a.val());
+                var b = parseInt($b.val());
+                var c = parseInt($c.val());
+                var n = parseInt($n.val());
+                if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(n)){
+                    $tryit.find(".checkio-result-in").html("Please enter a number");
+                    return false;
+                }
+                this_e.sendToConsoleCheckiO([a, b, c, n]);
+                e.stopPropagation();
+                return false;
+            });
 
-        var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
-
+        });
 
     }
 );

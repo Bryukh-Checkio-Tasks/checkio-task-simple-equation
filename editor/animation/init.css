@@ -158,6 +158,39 @@ fieldset[disabled] .btn {
     cursor: not-allowed;
     background-color: #eeeeee;
 }
+.tryit-content .tooltip{
+    font-family: Verdana;
+    font-size: 14px;
+    color: #294270;
+    text-align: center;
+}
 
-/* Your CSS */
-/*          */
+.tryit-content table td {
+    text-align: center;
+}
+
+.tryit-content table .td-button {
+    vertical-align: bottom;
+}
+
+.tryit-content .checkio-result{
+    font-size: 16px;
+    text-align: center;
+    color: #294270;
+    width: 160px;
+}
+
+.tryit-content .number-input {
+    height: 20px;
+    font-family: Verdana;
+    font-size: 16px;
+    text-align: center;
+    width: 40px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+.tryit-content .btn.bn-check {
+    margin-bottom: -1px;
+}
